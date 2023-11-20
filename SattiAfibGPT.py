@@ -16,13 +16,14 @@ client = OpenAI()
 
 assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
 
-thread = "thread_BLXhT8qtK8P94HJpBlZrmpl7"
+thread = "thread_7erFEqjw4i4wvLD0jWmMp6Wi"
 
 def getanswer(question):
 
   message = client.beta.threads.messages.create(
       thread_id=thread,
       role="user",
+      file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT'],
       content= question
   )
 
