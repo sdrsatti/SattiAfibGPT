@@ -15,10 +15,7 @@ import time
 
 #OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 
-client = OpenAI(
-    # defaults to os.environ.get("OPENAI_API_KEY")
-    # api_key="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",
-)
+client = OpenAI()
 
 assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
 
