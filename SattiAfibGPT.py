@@ -52,7 +52,7 @@ def getanswer(question):
 st.set_page_config(page_title='Satti Afib GPT', page_icon=':robot')
 
 
-st.header('Satti Afib ChatGPT')
+st.header('Satti Afib GPT')
 st.write('by S. D. Satti, MD, FACC, FHRS - me@sattimd.com')
 st.write("This is an extension of OpenAI's ChatGPT with additional training using atrial fibrillation guidelines.")
 st.write('')
