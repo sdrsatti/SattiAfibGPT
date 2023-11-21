@@ -49,7 +49,7 @@ def getanswer(question):
   return(answer)
 
 
-st.set_page_config(page_title='Satti Afib ChatGPT', page_icon=':robot')
+st.set_page_config(page_title='Satti Afib GPT', page_icon=':robot')
 
 
 st.header('Satti Afib ChatGPT')
