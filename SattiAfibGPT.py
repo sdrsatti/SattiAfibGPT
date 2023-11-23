@@ -14,9 +14,6 @@ import time
 
 client = OpenAI()
 
-#assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
-#thread = "thread_zK9rDvVd49BM2LqqVDepGv4D"
-
 assistant = client.beta.assistants.create(
     name="SattiAfibAI",
     instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions.",
@@ -32,7 +29,6 @@ def getanswer(question):
   message = client.beta.threads.messages.create(
       thread_id=thread.id,
       role="user",
-      #file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
       content= question
   )
 
@@ -66,7 +62,6 @@ st.write('by S. D. Satti, MD, FACC, FHRS - me@sattimd.com')
 st.write("This is an extension of OpenAI's ChatGPT with additional training using atrial fibrillation guidelines.")
 st.write('')
 
-base_prompt = "Give specific answers. In a separate paragraph, at the end give an itemized list the individual references for the following: "
 input_prompt = st.text_area(label='What is your query:', key='user_input')
 
 prompt = input_prompt
