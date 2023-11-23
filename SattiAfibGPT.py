@@ -18,7 +18,7 @@ assistant = client.beta.assistants.create(
     name="SattiAfibAI",
     instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions. Use all the files list for the best answer. List the name of the file used as a source used at the end of the response.",
     tools=[{"type": "retrieval"}],
-    file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-uzNb2OTrHeoJd0SF2mVSada8'],
+    file_ids=['file-3tvvTosyaSf9fXzinLOkVmtt','file-fa00atrlHnOQbM2JC7YVc19G','file-71yqdGUxJS1FrnqGzhyOX7Kp','file-vT1L1ONUC0ATp8a1k34Q3lox','file-QqoBonzUwtF9la18bpXz5Dvp'],
     model="gpt-4-1106-preview"
 )
 
@@ -35,7 +35,6 @@ def getanswer(question):
   run = client.beta.threads.runs.create(
     thread_id=thread.id,
     assistant_id=assistant.id,
-    #instructions="Give complete and through answers using the files uploaded and only answer medical questions"
   )
 
   while run.status != "completed":
