@@ -25,7 +25,7 @@ def getanswer(question):
   message = client.beta.threads.messages.create(
       thread_id=thread,
       role="user",
-      #file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
+      file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
       content= question
   )
 
