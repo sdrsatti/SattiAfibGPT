@@ -18,7 +18,7 @@ assistant = client.beta.assistants.create(
     name="SattiAfibAI",
     instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions. Use all the files list for the best answer. List the name of the file used as a source used at the end of the response.",
     tools=[{"type": "retrieval"}],
-    file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
+    file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-file-uzNb2OTrHeoJd0SF2mVSada8'],
     model="gpt-4-1106-preview"
 )
 
