@@ -16,9 +16,9 @@ client = OpenAI()
 
 assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
 
-#thread = "thread_7erFEqjw4i4wvLD0jWmMp6Wi"
+thread = "thread_zK9rDvVd49BM2LqqVDepGv4D"
 
-thread = client.beta.threads.create()
+#thread = client.beta.threads.create()
 
 def getanswer(question):
 
