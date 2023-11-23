@@ -16,7 +16,7 @@ client = OpenAI()
 
 assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
 
-thread = "thread_7erFEqjw4i4wvLD0jWmMp6Wi"
+#thread = "thread_7erFEqjw4i4wvLD0jWmMp6Wi"
 
 thread = client.beta.threads.create()
 
