@@ -14,18 +14,25 @@ import time
 
 client = OpenAI()
 
-assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
+#assistant = "asst_E8wDEsIHWMxQRuWDYiEmL88R"
+#thread = "thread_zK9rDvVd49BM2LqqVDepGv4D"
 
-thread = "thread_zK9rDvVd49BM2LqqVDepGv4D"
+assistant = client.beta.assistants.create(
+    name="SattiAfibAI",
+    instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions.",
+    tools=[{"type": "Retrieval"}],
+    file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
+    model="gpt-4-1106-preview"
+)
 
-#thread = client.beta.threads.create()
+thread = client.beta.threads.create()
 
 def getanswer(question):
 
   message = client.beta.threads.messages.create(
-      thread_id=thread,
+      thread_id=thread.id,
       role="user",
-      file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
+      #file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
       content= question
   )
 
