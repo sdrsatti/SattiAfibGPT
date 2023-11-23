@@ -37,20 +37,20 @@ def getanswer(question):
   )
 
   run = client.beta.threads.runs.create(
-    thread_id=thread,
-    assistant_id=assistant,
+    thread_id=thread.id,
+    assistant_id=assistant.id,
     instructions="Give complete and through answers using the files uploaded and only answer medical questions"
   )
 
   while run.status != "completed":
       time.sleep(1)
       run = client.beta.threads.runs.retrieve(
-      thread_id=thread,
+      thread_id=thread.id,
       run_id=run.id
   )
 
   messages = client.beta.threads.messages.list(
-    thread_id=thread
+    thread_id=thread.id
   )
 
   answer = messages.data[0].content[0].text.value
