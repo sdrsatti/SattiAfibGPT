@@ -20,7 +20,7 @@ client = OpenAI()
 assistant = client.beta.assistants.create(
     name="SattiAfibAI",
     instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions.",
-    tools=[{"type": "Retrieval"}],
+    tools=[{"type": "retrieval"}],
     file_ids=['file-6CknLux1aKEpnQsnNWu1gXru','file-KK2ftqNAy2k4fuDdDpye33ID','file-lLyLrzE8DotbloC2fuuKQOcT','file-fSx8VveL93DeI3nDLU19z09p'],
     model="gpt-4-1106-preview"
 )
