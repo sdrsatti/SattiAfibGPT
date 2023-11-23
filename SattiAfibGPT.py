@@ -35,7 +35,7 @@ def getanswer(question):
   run = client.beta.threads.runs.create(
     thread_id=thread.id,
     assistant_id=assistant.id,
-    instructions="Give complete and through answers using the files uploaded and only answer medical questions"
+    #instructions="Give complete and through answers using the files uploaded and only answer medical questions"
   )
 
   while run.status != "completed":
