@@ -14,13 +14,19 @@ import time
 
 client = OpenAI()
 
-assistant = client.beta.assistants.create(
-    name="SattiAfibAI",
-    instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions. Use all the files list for the best answer. List the name of the file used as a source used at the end of the response.",
-    tools=[{"type": "retrieval"}],
-    file_ids=['file-tIyR41swsflZNvgCGv91y350','file-bRYYc7H6esMwIH4bkWeMnbMN','file-tLB1T2KSUrZ2m6YQGosfwUcb','file-kvsYyVmOQGKBOEgrwbSX5Mg2','file-gZeeYgcyIGOzH8uDGbWOo5B8'],
-    model="gpt-4-1106-preview"
+assistant_id = 'asst_6sXJlVS4nXYyP1wAPOs3VVzf'
+
+assistant = client.beta.assistants.retrieve(
+    assistant_id=assistant_id
 )
+
+# assistant = client.beta.assistants.create(
+#     name="SattiAfibAI",
+#     instructions="You are a senior electrophysiologist with a specialized interest in the management of atrial fibrillation. Give complete and through answers using the files uploaded and only answer medical questions. Use all the files list for the best answer. List the name of the file used as a source used at the end of the response.",
+#     tools=[{"type": "retrieval"}],
+#     file_ids=['file-tIyR41swsflZNvgCGv91y350','file-bRYYc7H6esMwIH4bkWeMnbMN','file-tLB1T2KSUrZ2m6YQGosfwUcb','file-kvsYyVmOQGKBOEgrwbSX5Mg2','file-gZeeYgcyIGOzH8uDGbWOo5B8'],
+#     model="gpt-4-1106-preview"
+# )
 
 thread = client.beta.threads.create()
 
