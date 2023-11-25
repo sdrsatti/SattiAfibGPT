@@ -14,7 +14,7 @@ import time
 
 client = OpenAI()
 
-assistant_id = 'asst_6sXJlVS4nXYyP1wAPOs3VVzf'
+assistant_id = 'asst_Y46GGDXRJES8ViRpKUznIUMO'
 
 assistant = client.beta.assistants.retrieve(
     assistant_id=assistant_id
